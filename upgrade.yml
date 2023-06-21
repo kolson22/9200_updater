@@ -57,7 +57,7 @@
         - name: Copy IOS image via TFTP
           cisco.ios.ios_command:
             commands:
-              - command: "copy tftp://{{ ftp_ip }}/{{ new_file }} flash:{{ new_file }}"
+              - command: "copy tftp://{{ tftp_ip }}/{{ new_file }} flash:{{ new_file }}"
                 prompt:
                   - "Destination filename [{{ new_file }}]?"
                 answer:
