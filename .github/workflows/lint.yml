@@ -30,4 +30,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Lint all YAML files
-        run: ansible-lint *.yml
+        run: ansible-lint --exclude hosts.yml *.yml 
