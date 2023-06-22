@@ -52,8 +52,8 @@
 
         - name: Display install_remove output and result
           debug:
-            msg: "{{ 'No old files found. Nothing to clean.' 
-            if 'SUCCESS: No extra package or provisioning files found on media' in install_remove_output.stdout[0] 
+            msg: "{{ 'No old files found. Nothing to clean.'
+            if 'SUCCESS: No extra package or provisioning files found on media' in install_remove_output.stdout[0]
             else 'Old files removed successfully.' }}"
 
         - name: Copy IOS image via TFTP
