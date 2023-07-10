@@ -59,7 +59,7 @@
         - name: Copy IOS image via TFTP
           cisco.ios.ios_command:
             commands:
-              - command: "copy tftp://{{ tftp_ip }}/{{ new_file }} flash:{{ new_file }}"
+              - command: "copy tftp://{{ tftp_ip }}/{{ new_file }} flash://{{ new_file }}"
                 prompt:
                   - "Destination filename [{{ new_file }}]?"
                 answer:
@@ -70,7 +70,7 @@
         - name: Install and activate new IOS image
           cisco.ios.ios_command:
             commands:
-              - command: "install add file flash:{{ new_file }} activate commit"
+              - command: "install add file flash://{{ new_file }} activate commit"
                 prompt:
                   - 'This operation may require a reload of the system. Do you want to proceed\? \[y/n\]'
                 answer:
